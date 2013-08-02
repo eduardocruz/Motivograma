@@ -32,7 +32,7 @@
                                 <th colspan="2">O que mais incentiva e estimula o seu desempenho é:</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td><input type="radio" name="A1" id="V" value="1" class="V"></td>
+                            <tr><td><input type="radio" name="A1" id="V" value="1" class="VAnswer"></td>
                                 <td>V</td>
                                 <td>Um salário compatível com as minhas necessidades básicas e as de minha família</td>
                             </tr>
@@ -67,7 +67,7 @@
                     <input type="text" class="input-mini" placeholder="X">
                 </div>
                 <div class="span2">
-                    <input type="text" class="input-mini" placeholder="V">
+                    <input type="text" class="input-mini VTotal" placeholder="V">
                 </div>
                 <div class="span2">
                     <input type="text" class="input-mini" placeholder="W">
@@ -85,13 +85,19 @@
         <![endif]-->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+<!--
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+          _gaq.push(['_trackPageview']);
 
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+-->
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
         <!-- endbuild -->
