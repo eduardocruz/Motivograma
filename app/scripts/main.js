@@ -2,7 +2,7 @@ require.config({
 	paths: {
 		jquery: '../bower_components/jquery/jquery',
 		bootstrap: 'vendor/bootstrap',
-		chart: 'vendor/chart'
+		chart: 'lib/chart'
 	},
 	shim: {
 		bootstrap: {
@@ -12,7 +12,7 @@ require.config({
 	}
 });
 
-require(['app', 'jquery', 'bootstrap', 'chart'], function (app, $, chart) {
+require(['jquery', 'bootstrap', 'chart'], function ($, bootstrap) {
 	'use strict';
 	// use app here    
 	//console.log(app);
@@ -56,12 +56,15 @@ require(['app', 'jquery', 'bootstrap', 'chart'], function (app, $, chart) {
         var data = {
             labels : ['Fisiológica','Segurança','Associação','Auto-Estima','Auto-Realização'],
             datasets : [{fillColor : 'rgba(151,187,205,0.5)',strokeColor : 'rgba(151,187,205,1)',data : [V,W,X,Y,Z]}]
-        };
-        var myNewChart = new Chart(ctx).Bar(data);
+        };       
+        new Chart(ctx).Bar(data);
 	}
 
-	$('#SubmitForm').click(function(){
-		countAnswers();
-		plotGraph(totalV, totalW, totalX, totalY, totalZ);
-	});
+    $('#SubmitForm').click(function(){
+        countAnswers();
+        plotGraph(totalV, totalW, totalX, totalY, totalZ);
+    });
+
+
+	
 });
