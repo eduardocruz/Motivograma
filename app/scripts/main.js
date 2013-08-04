@@ -2,7 +2,7 @@ require.config({
 	paths: {
 		jquery: '../bower_components/jquery/jquery',
 		bootstrap: 'vendor/bootstrap',
-		chart: 'lib/chart'
+		chart: 'vendor/chart'
 	},
 	shim: {
 		bootstrap: {
